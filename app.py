@@ -38,11 +38,11 @@ def main():
     hypertension = st.sidebar.radio('Hypertension', (1, 0))
     heart_disease = st.sidebar.radio('Heart Disease', (1, 0))
     ever_married = st.sidebar.radio('Ever Married', ('Yes', 'No'))
-    work_type = st.sidebar.multiselect('Work Type', options = ['children', 'Govt_job', 'Never_worked', 'Private', 'Self-employed'])
-    residence_type = st.sidebar.radio('Residence Type', ('Rural', 'Urban'))
+    work_type = st.sidebar.multiselect('Work Type', options = ['children', 'Govt_job', 'Never_worked', 'Private', 'Self-employed'], default = 'Never_worked')
+    residence_type = st.sidebar.radio('Residence Type', ('Rural', 'Urban'), default = 'Urban')
     avg_glucose_level = st.sidebar.slider('Average Glucose Level', min_value = 50.0, max_value = 300.0)
     bmi = st.sidebar.slider('Body Mass Index', min_value = 5.0, max_value = 70.0)
-    smoking_status = st.sidebar.multiselect('Smoking Status', options = ['formerly smoked', 'never smoked', 'smokes', 'Unknown'])
+    smoking_status = st.sidebar.multiselect('Smoking Status', options = ['formerly smoked', 'never smoked', 'smokes', 'Unknown'], default = 'never smoked')
     
     features = {
         'Gender': gender,
